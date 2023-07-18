@@ -1,38 +1,95 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 12px;
+}
+nav>div>b>i{
+  text-shadow: 0 0 3px #45d669, 0 0 5px #c3c532;
+  font-size: 150%;
+}
+.main-container{
+  margin: 27px;
+}
+.nav-btn-group{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  height: 26px;
+}
+.nav-btn-group>button:hover{
+  background-color: crimson;
   color: white;
+  border-radius: 15px;
 }
-
-.App-link {
-  color: #61dafb;
+main{
+  border: 1px solid red;
+  padding-bottom: 10px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stud-collections{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.stud-card{
+  border: 1px solid peru;
+  height: 250px;
+  width: 170px;
+  background-color: whitesmoke;
+  border-radius: 12px;
+}
+.card-btn-group{
+  padding: 1px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.card-btn-group>button{
+ padding: 4px;
+ width: 55px;
+ border-radius: 5px;
+}
+.card-btn-group>button:hover{
+  background-color: lightseagreen;
+  color: aliceblue;
+}
+input{
+  padding: 7px;
+  width: 80%;
+}
+.form-group{
+  padding: 5px;
+  background-color: whitesmoke;
+}
+.form1-group{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+input{
+  margin: 2px;
+}
+.form1-group>button{
+  height: 25px;
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+.form1-group>button:hover{
+  background-color: rgb(50, 183, 201);
+  border-radius: 5px;
+}
+.form-group>button{
+  height: 25px;
+  margin: 0.5rem;
+  border-radius: 5px;
+}
+.form-group>button:hover{
+  background-color: rgb(50, 183, 201);
+  border-radius: 5px;
 }
