@@ -40,7 +40,7 @@ function AddStudent({student, setStudent}) {
  
       try {
    
-        const res =await fetch(`https://646849c860c8cb9a2ca6b1ea.mockapi.io/students`,{
+        const res =await fetch(`https://656af622dac3630cf727805f.mockapi.io/students`,{
           method : "POST",
           body : JSON.stringify(newStudent),
           headers :{

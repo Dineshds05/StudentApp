@@ -5,7 +5,7 @@ const Students = ({students, setStudents}) => {
     const navigate = useNavigate()
     const deleteStudent = async (studentID) =>{
         try {
-          const res = await fetch(`https://646849c860c8cb9a2ca6b1ea.mockapi.io/students/${studentID}`,{
+          const res = await fetch(`https://656af622dac3630cf727805f.mockapi.io/students/${studentID}`,{
             method : "DELETE"
           });
         let data = await res.json();
