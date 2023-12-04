@@ -1,6 +1,8 @@
 import React from "react";
 import Base from "../Base/Base";
 import { useNavigate } from "react-router-dom";
+import Paper from '@mui/material/Paper';
+import Box from '@mui/material/Box';
 const Students = ({students, setStudents}) => {
     const navigate = useNavigate()
     const deleteStudent = async (studentID) =>{
@@ -21,9 +23,24 @@ const Students = ({students, setStudents}) => {
         Title = {'Student Info'}
         Description={"All Student info will be displayed here"}
         >
+          
+      
         <div className='stud-collections'>
-         {students.map((stud, idx)=>(
+                 {students.map((stud, idx)=>(
+                 
             <div className="stud-card" key={idx}>
+               <Box
+                  sx={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    '& > :not(style)': {
+                      m: 1,
+                      width: 180,
+                      height: 250,
+                    },
+                  }}
+                >
+            <Paper elevation={10}>
                 <h3>{stud.name}</h3>
                 <p>Batch : {stud.batch}</p>
                 <p>Education : {stud.education}</p>
@@ -32,10 +49,12 @@ const Students = ({students, setStudents}) => {
                 <div className='card-btn-group'>
                  <button onClick={()=>navigate(`/Editstudents/${stud.id}`)}>Edit</button>
                  <button onClick={()=>deleteStudent(stud.id)}>Delete</button>
-                </div>
+                </div></Paper></Box>
             </div>
          ))}
-        </div>
+         
+        </div> 
+        
         </Base>
     );
   }

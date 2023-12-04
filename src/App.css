@@ -9,6 +9,7 @@ nav{
 nav>div>b>i{
   text-shadow: 0 0 3px #45d669, 0 0 5px #c3c532;
   font-size: 150%;
+  width: 50%;
 }
 .main-container{
   margin: 27px;
@@ -36,11 +37,7 @@ main{
   gap: 1rem;
 }
 .stud-card{
-  border: 1px solid peru;
-  height: 250px;
-  width: 170px;
-  background-color: whitesmoke;
-  border-radius: 12px;
+  background-color: rgba(10, 10, 10, 0.089);
 }
 .card-btn-group{
   padding: 1px;
