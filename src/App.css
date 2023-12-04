@@ -1,6 +1,10 @@
 .container {
     padding-top: 0.2rem;
 }
+.image{
+  height: 80vh;
+  width: 80vw;
+}
 .App {
   text-align: center;
 }

@@ -9,7 +9,7 @@ function Base({Title, Description, children}) {
         <header>
         <AppBar variant="outlined" position="static">
   <Toolbar variant="dense">
-    <Typography variant="h5" edge="start" color="inherit" aria-label="menu" sx={{ mr: 85 }}>
+    <Typography variant="h5" edge="start" color="inherit" aria-label="menu" sx={{ mr: 10 }}>
     <div><b><i>STUDENT APP</i></b></div>
     </Typography>
     <Stack direction="row" spacing={2}>
