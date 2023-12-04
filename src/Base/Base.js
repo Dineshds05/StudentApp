@@ -1,4 +1,4 @@
-import { AppBar, Button, IconButton, Stack, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, IconButton, Stack, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 function Base({Title, Description, children}) {
@@ -6,12 +6,13 @@ function Base({Title, Description, children}) {
     return (
         <div className="container">
         <header>
-        <AppBar variant="outlined" position="static">
-  <Toolbar variant="dense">
+        <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
     <Typography variant="h6" edge="start" color="inherit" aria-label="menu" sx={{ mr: 10 }}>
-    STUDENT APP
+     STUDENT APP
     </Typography>
-    <Stack direction="row" spacing={2}>
+    <Stack direction="row" spacing={1}>
     <Button variant="contained" onClick={()=>navigate("/")}>
     <Typography variant="h8" color="white" component="div" >
     Dashboard
@@ -27,7 +28,7 @@ function Base({Title, Description, children}) {
     </Stack>
   </Toolbar>
 </AppBar>
-
+</Box>
 </header>
 <div className="main-container">
         <main>
