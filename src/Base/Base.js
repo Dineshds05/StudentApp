@@ -9,7 +9,7 @@ function Base({Title, Description, children}) {
         <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-    <Typography variant="h6" edge="start" color="inherit" aria-label="menu" sx={{ mr: 10 }}>
+    <Typography variant="h6" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
      STUDENT APP
     </Typography>
     <Stack direction="row" spacing={1}>
