@@ -4,13 +4,12 @@ import { useNavigate } from "react-router-dom";
 function Base({Title, Description, children}) {
  const navigate = useNavigate()
     return (
-      
         <div className="container">
         <header>
         <AppBar variant="outlined" position="static">
   <Toolbar variant="dense">
-    <Typography variant="h5" edge="start" color="inherit" aria-label="menu" sx={{ mr: 10 }}>
-    <div><b><i>STUDENT APP</i></b></div>
+    <Typography variant="h6" edge="start" color="inherit" aria-label="menu" sx={{ mr: 10 }}>
+    STUDENT APP
     </Typography>
     <Stack direction="row" spacing={2}>
     <Button variant="contained" onClick={()=>navigate("/")}>
