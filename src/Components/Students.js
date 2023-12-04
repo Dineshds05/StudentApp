@@ -1,3 +1,4 @@
+import { AppBar, Button, IconButton, Stack, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import Base from "../Base/Base";
 import { useNavigate } from "react-router-dom";
@@ -36,7 +37,7 @@ const Students = ({students, setStudents}) => {
                     '& > :not(style)': {
                       m: 1,
                       width: 180,
-                      height: 250,
+                      height: 280,
                     },
                   }}
                 >
@@ -47,8 +48,8 @@ const Students = ({students, setStudents}) => {
                 <p>Gender : {stud.gender}</p>
                 <p>Skills : {stud.skills}</p>
                 <div className='card-btn-group'>
-                 <button onClick={()=>navigate(`/Editstudents/${stud.id}`)}>Edit</button>
-                 <button onClick={()=>deleteStudent(stud.id)}>Delete</button>
+                 <Button onClick={()=>navigate(`/Editstudents/${stud.id}`)} variant="contained">Edit</Button>
+                 <Button onClick={()=>deleteStudent(stud.id)} variant="contained">Delete</Button>
                 </div></Paper></Box>
             </div>
          ))}

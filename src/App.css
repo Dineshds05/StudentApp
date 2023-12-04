@@ -1,3 +1,6 @@
+.container {
+    padding-top: 0.2rem;
+}
 .App {
   text-align: center;
 }
@@ -9,7 +12,6 @@ nav{
 nav>div>b>i{
   text-shadow: 0 0 3px #45d669, 0 0 5px #c3c532;
   font-size: 150%;
-  width: 50%;
 }
 .main-container{
   margin: 27px;
@@ -40,15 +42,17 @@ main{
   background-color: rgba(10, 10, 10, 0.089);
 }
 .card-btn-group{
-  padding: 1px;
+  padding: 2px;
   display: flex;
   justify-content: center;
   gap: 1rem;
+  height: 2rem;
 }
 .card-btn-group>button{
- padding: 4px;
+ padding: 10px;
  width: 55px;
  border-radius: 5px;
+ height: 2rem;
 }
 .card-btn-group>button:hover{
   background-color: lightseagreen;

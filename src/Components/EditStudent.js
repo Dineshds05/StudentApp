@@ -1,3 +1,4 @@
+import { AppBar, Button, IconButton, Stack, TextField, Toolbar, Typography } from "@mui/material";
 import React, { useEffect } from "react";
 import { useState } from "react";
 import Base from "../Base/Base";
@@ -67,51 +68,57 @@ function EditStudent({studentobj,setstudents})
       <div className='form1-group'>
         <h3>Update Students</h3>
         
-        <input
-        placeholder='Enter Student ID'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student ID" variant="outlined"
+        margin="dense"
+        size="normal"
         type="number"
         value={idx}
         onChange={(e)=>setIDX(e.target.value)}
         />
 
-        <input
-        placeholder='Enter Student Name'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Name" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={name}
         onChange={(e)=>setName(e.target.value)}
         />
 
-        <input
-        placeholder='Enter Student Batch'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Batch" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={batch}
         onChange={(e)=>setBatch(e.target.value)}
         />
 
-        <input
-        placeholder='Enter Student Education'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Education" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={education}
         onChange={(e)=>setEducation(e.target.value)}
         />
 
-        <input
-        placeholder='Enter Student Gender'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Gender" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={gender}
         onChange={(e)=>setGender(e.target.value)}
         />
 
-        <input
-        placeholder='Enter Student Skills'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Skills" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={skills}
         onChange={(e)=>setSkills(e.target.value)}
         />
         <br/>
-        <button onClick={UpdateStudents}>
+        <Button onClick={UpdateStudents} variant="contained">
             UpdateStudents
-        </button>
+        </Button>
       </div></Base>
     );
   }

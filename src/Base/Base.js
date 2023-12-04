@@ -5,7 +5,7 @@ function Base({Title, Description, children}) {
  const navigate = useNavigate()
     return (
       
-        <div>
+        <div className="container">
         <header>
         <AppBar variant="outlined" position="static">
   <Toolbar variant="dense">

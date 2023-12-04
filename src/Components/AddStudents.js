@@ -1,3 +1,4 @@
+import { AppBar, Button, IconButton, Stack, TextField, Toolbar, Typography } from "@mui/material";
 import React, { useState } from "react";
 import Base from "../Base/Base";
 import { useNavigate } from "react-router-dom";
@@ -8,7 +9,7 @@ export const studentvalidationschema = yup.object({
   name : yup.string().required("Please fill the name"),
   batch : yup.string().required("Fill the batch").min(5,"minimum 5 required"),
   education : yup.string().required("Fill the education details"),
-  gender : yup.string().required("Please specify the gender"),
+  gender : yup.string().required("Please specify the gender"), 
   skills : yup.string().required("Fill the skills")
 })
 
@@ -62,8 +63,9 @@ function AddStudent({student, setStudent}) {
         <form onSubmit={handleSubmit}>
       <div className='form-group'>
         <h3>Add Students</h3>
-        <input
-        placeholder='Enter Student Name'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Name" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={values.name}
         onChange={handleChange}
@@ -71,8 +73,9 @@ function AddStudent({student, setStudent}) {
         name="name"
         />
         {touched.name && errors.name ? <div style={{color:"crimson"}}>{errors.name}</div> : ""}
-        <input
-        placeholder='Enter Student Batch'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Batch" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={values.batch}
         onChange={handleChange}
@@ -80,8 +83,9 @@ function AddStudent({student, setStudent}) {
         name="batch"
         />
        {touched.batch && errors.batch ? <div style={{color:"crimson"}}>{errors.batch}</div> : ""}
-        <input
-        placeholder='Enter Student Education'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Education" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={values.education}
         onChange={handleChange}
@@ -89,8 +93,9 @@ function AddStudent({student, setStudent}) {
         name="education"
         />
        {touched.batch && errors.education ? <div style={{color:"crimson"}}>{errors.education}</div> : ""}
-        <input
-        placeholder='Enter Student Gender'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Gender" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={values.gender}
         onChange={handleChange}
@@ -98,8 +103,9 @@ function AddStudent({student, setStudent}) {
         name="gender"
         />
        {touched.gender && errors.gender ? <div style={{color:"crimson"}}>{errors.gender}</div> : ""}
-        <input
-        placeholder='Enter Student Skills'
+        <TextField fullWidth color="success" id="outlined-basic" label="Enter Student Skills" variant="outlined"
+        margin="dense"
+        size="normal"
         type="text"
         value={values.skills}
         onChange={handleChange}
@@ -108,9 +114,9 @@ function AddStudent({student, setStudent}) {
         />
         {touched.skills && errors.skills ? <div style={{color:"crimson"}}>{errors.skills}</div> : ""}
         <br/>
-        <button type="submit" variant="contained">
+        <Button type="submit" variant="contained">
             AddStudents
-        </button>
+        </Button>
       </div></form></Base>
     );
   }
